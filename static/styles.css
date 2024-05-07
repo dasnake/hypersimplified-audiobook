@@ -1,0 +1,61 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.control-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    padding: 0 20%;
+}
+
+/*
+button {
+    height: 90vh;
+    width: 100%;
+    font-size: 2em;
+    transition: background-color 0.3s ease;
+    color: white;
+    border: none;
+    outline: none;
+}*/
+button {
+    height: 100%;
+    width: 100%;
+    font-size: 2em;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    border: none;
+    outline: none;    
+}
+
+#playButton {
+    width: 80%;
+}
+
+#forwardButton {
+    background-color: blue;
+}
+#backwardButton {
+    background-color: yellow;
+}
+
+.play {
+    background-color: #4CAF50; /* Green */
+}
+
+.pause {
+    background-color: #f44336; /* Red */
+}
