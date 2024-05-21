@@ -43,6 +43,12 @@ async def get_client(request: Request):
     logging.basicConfig(level=logging.DEBUG)
     return templates.TemplateResponse("index.html", {"request": request})
 
+@app.get("/set", response_class=HTMLResponse)
+async def get_client(request: Request):
+    logging.basicConfig(level=logging.DEBUG)
+    return templates.TemplateResponse("set.html", {"request": request})
+
+
 @app.websocket("/ws/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: int, last_position: Optional[int] = Cookie(default=0)):
     if client_id not in clients:
