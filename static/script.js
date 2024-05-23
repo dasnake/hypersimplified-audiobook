@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 		let lastPosition = parseInt(getCookie('last_position'));
 		lastPosition += 128*1024;
 		updateCookie('last_position', lastPosition);
-		playPauseButton.textContent = calculatePercentage();
+		playPauseButton.textContent = calculatePercentage(totalSize);
 		console.log(`Updated last_position to ${lastPosition}`);
             }
         }
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 	updateCookie('last_position', position);
 	await clearBuffer();
 	console.log(`MediaSource readyState: ${mediaSource.readyState}`);
-	playPauseButton.textContent = calculatePercentage();
+	playPauseButton.textContent = calculatePercentage(totalSize);
         playPauseButton.className = "play";
     }
     
